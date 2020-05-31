@@ -1,0 +1,4 @@
+<button open-type="getUserInfo" type="primary" plain 
+bindgetuserinfo="handelGetUserInfo">
+   登录
+</button>

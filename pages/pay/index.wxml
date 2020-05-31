@@ -1,0 +1,63 @@
+<view class="revice-address-row">
+	<!--当收货地址 不存在 时显示按钮 对象 空对象 bool类型也为true-->
+	<view class="address-btn" wx:if="{{!address.userName}}">
+		<button bind:tap="handelAddress" type="primary" plain>获取收货地址</button>
+	</view>
+	<!--当收地址存在 详细信息显示-->
+	<view class="address-info" wx:else>
+		<view class="user-info">
+			<view>
+				收货人： {{address.userName}}
+			</view>
+			<view>
+				{{address.detail}}
+			</view>
+		</view>
+		<view class="user-phone">
+			{{address.telNumber}}
+		</view>
+	</view>
+</view>
+
+<!--购物车内容-->
+<view class="car-content">
+	<view class="car-title">购物车</view>
+	<view class="cart-main">
+		<block wx:if="{{cars.length!==0}}">
+         <view class="car-item" wx:for="{{cars}}" wx:key="goods_id">
+			<!--商品图片-->
+			<navigator class="car-img">
+				<image src="{{item.goods_small_logo}}" mode="widthFix" />
+			</navigator>
+			<!--商品信息-->
+			<view class="car-info-wrap">
+				<view class="goods-name">商品陈赫呢</view>
+				<view class="goods-price-wrap">
+					<view class="goods-price">¥{{item.goods_price}}</view>
+					<view class="cart-num-tool">
+						<view class="goods-num">X {{item.num}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+      </block>
+	</view>
+</view>
+
+<!--底部工具栏-->
+<view class="footer-tool">
+	<!--总价格-->
+	<view class="total-price-wrap">
+		<view class="total-price">
+			合计：
+			<text class="total-price-text">¥{{totalPrice}}</text>
+		</view>
+		<view class="price-mark">包含运费</view>
+	</view>
+   <!--结算-->
+	<view class="order-pay-wrap" bind:tap="handelOrderPay">
+			支付
+			<text>({{totalNum}})</text>
+	</view>
+</view>
+

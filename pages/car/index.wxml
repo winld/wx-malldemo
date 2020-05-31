@@ -1,0 +1,81 @@
+<view class="revice-address-row">
+	<!--当收货地址 不存在 时显示按钮 对象 空对象 bool类型也为true-->
+	<view class="address-btn" wx:if="{{!address.userName}}">
+		<button bind:tap="handelAddress" type="primary" plain>获取收货地址</button>
+	</view>
+	<!--当收地址存在 详细信息显示-->
+	<view class="address-info" wx:else>
+		<view class="user-info">
+			<view>
+				收货人： {{address.userName}}
+			</view>
+			<view>
+				{{address.detail}}
+			</view>
+		</view>
+		<view class="user-phone">
+			{{address.telNumber}}
+		</view>
+	</view>
+</view>
+
+<!--购物车内容-->
+<view class="car-content">
+	<view class="car-title">购物车</view>
+	<view class="cart-main">
+		<block wx:if="{{cars.length!==0}}">
+         <view class="car-item" wx:for="{{cars}}" wx:key="goods_id">
+			<!--复选框-->
+			<view class="car-chk-wrap">
+				<checkbox-group data-id="{{item.goods_id}}" bindchange="handelItemchange">
+					<checkbox checked="{{item.checked}}" color="#E42F14"/>
+				</checkbox-group>
+			</view>
+			<!--商品图片-->
+			<navigator class="car-img">
+				<image src="{{item.goods_small_logo}}" mode="widthFix" />
+			</navigator>
+			<!--商品信息-->
+			<view class="car-info-wrap">
+				<view class="goods-name">商品陈赫呢</view>
+				<view class="goods-price-wrap">
+					<view class="goods-price">¥{{item.goods_price}}</view>
+					<view class="cart-num-tool">
+						<view class="num-edit" bind:tap="handelChangeNum" data-id="{{item.goods_id}}" data-operation="{{-1}}">-</view>
+						<view class="goods-num">{{item.num}}</view>
+						<view class="num-edit" bind:tap="handelChangeNum"  data-id="{{item.goods_id}}" data-operation="{{1}}">+</view>
+					</view>
+				</view>
+			</view>
+		</view>
+      </block>
+      <block wx:else>
+          <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1579364873371&di=7706266d87a1772ccd7ff9fb3f5771da&imgtype=0&src=http%3A%2F%2Fm.hua.com%2Fimages%2Fgwc_k.png" mode="widthFix"/>
+      </block>
+	</view>
+</view>
+
+<!--底部工具栏-->
+<view class="footer-tool">
+	<!--全选-->
+	<view class="all-chk-wrap">
+		<checkbox-group  bindchange="handelCheckAll">
+			<checkbox checked="{{allChecked}}" color="#E42F14"/>
+			全选
+		</checkbox-group>
+	</view>
+	<!--总价格-->
+	<view class="total-price-wrap">
+		<view class="total-price">
+			合计：
+			<text class="total-price-text">¥{{totalPrice}}</text>
+		</view>
+		<view class="price-mark">包含运费</view>
+	</view>
+   <!--结算-->
+	<view class="order-pay-wrap" bind:tap="handelPay">
+			结算
+			<text>({{totalNum}})</text>
+	</view>
+</view>
+

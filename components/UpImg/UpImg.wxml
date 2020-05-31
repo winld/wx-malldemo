@@ -1,0 +1,4 @@
+<view class="up-img-warp">
+  <image src="https://ae01.alicdn.com/kf/H1e0fcbbc556c442e99753abeb2ef4f2bj.jpg" />
+  <icon type="clear" size="23" color="red" />
+</view>

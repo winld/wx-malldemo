@@ -1,0 +1,71 @@
+<view class="user-info-wrap">
+	<view class="user-img-wrap">
+		<block wx:if="{{userinfo.avatarUrl}}">
+			<image src="{{userinfo.avatarUrl}}" mode="widthFix" class="user_bg" />
+			<view class="user-info">
+				<image src="{{userinfo.avatarUrl}}" class="user-icon" />
+				<view class="user-name">{{userinfo.nickName}}</view>
+			</view>
+		</block>
+		<block wx:else>
+			<navigator class="btn-login" url="/pages/login/index">
+				登录
+			</navigator>
+		</block>
+	</view>
+</view>
+
+<view class="user-content">
+	<view class="user-main">
+		<view class="history-wrap">
+			<navigator url="" open-type="navigate">
+				<view class="his-num">0</view>
+				<view class="his-name">收藏的店铺</view>
+			</navigator>
+			<navigator url="/pages/collect/index" open-type="navigate">
+				<view class="his-num">{{collectNum}}</view>
+				<view class="his-name">收藏的商品</view>
+			</navigator>
+			<navigator url="" open-type="navigate">
+				<view class="his-num">0</view>
+				<view class="his-name">关注的商品</view>
+			</navigator>
+			<navigator url="" open-type="navigate">
+				<view class="his-num">0</view>
+				<view class="his-name">我的足迹</view>
+			</navigator>
+		</view>
+		<!--我的订单-->
+		<view class="order-list">
+			<view class="order-header-title">我的订单</view>
+			<view class="order-wrap">
+				<navigator url="/pages/order/index?type=1">
+					<view class="icon iconfont icon-dingdan"></view>
+					<view class="order-title">全部订单</view>
+				</navigator>
+				<navigator url="/pages/order/index?type=2">
+					<view class="icon iconfont icon-zhifu"></view>
+					<view class="order-title">待付款</view>
+				</navigator>
+				<navigator url="/pages/order/index?type=3">
+					<view class="icon iconfont icon-querenshouhuo"></view>
+					<view class="order-title">待收货</view>
+				</navigator>
+				<navigator url="/pages/order/index?type=4">
+					<view class="icon iconfont icon-Group-"></view>
+					<view class="order-title">退款/退货</view>
+				</navigator>
+			</view>
+		</view>
+
+		<view class="item">收货地址管理</view>
+		<view class="item call-phone-item">
+       <view>  联系客服</view>
+       <text class="con-phone">15281012639</text>
+      </view>
+		<navigator url="/pages/feedback/index" class="item" open-type="navigate" >意见反馈</navigator>
+		<view class="item about-me">关于我们</view>
+		<view class="item">把应用推荐给其他人</view>
+	</view>
+</view>
+

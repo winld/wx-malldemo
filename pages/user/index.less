@@ -1,0 +1,103 @@
+page{
+   background-color: #ebebeb;
+}
+.user-info-wrap {
+   height: 45vh;
+   overflow: hidden;
+   background-color: var(--themeColor);
+   font-size:36rpx;
+  
+   .user-img-wrap {
+      height: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .btn-login{
+         display: inline-block;
+         height: 80rpx;
+         width: 50%;
+         color:rgb(121, 120, 120);
+         background-color: white;
+         line-height: 80rpx;
+         border:1px solid rgb(121, 120, 120);
+         border-radius: 10rpx;
+         text-align: center;
+      }
+     .user_bg {
+       height: 45vh;
+       //高斯模糊
+       filter:blur(5rpx);
+     }
+ 
+     .user-info {
+        position: absolute;
+        color: white;
+       .user-icon {
+         height: 150rpx;
+         width: 150rpx;
+         border-radius: 50%;
+       }
+       .user-name {
+          text-align: center;
+          padding-top:20rpx;
+       }
+     }
+   }
+ }
+ .user-content{
+    color:#585757;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size:26rpx;
+    .user-main{
+      position: absolute;
+      top:-50rpx;
+      width: 95%;
+      background-color: white;
+      border-radius: 5rpx;
+       .history-wrap{
+         display: flex;
+         justify-content: space-between;
+         padding:15rpx;
+         text-align: center;
+          navigator{
+             .his-num{
+               color:var(--themeColor);
+             }
+          }
+       }
+
+       .order-list{
+          border-top:20rpx solid #ebebeb;
+          border-bottom:20rpx solid #ebebeb;
+          .order-header-title{
+           padding:10rpx;
+           font-size:32rpx;
+           border-bottom:1px solid #ebebeb;
+          }
+          .order-wrap{
+            margin-top:5rpx;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            padding:10rpx;
+            .icon{
+               color:var(--themeColor);
+            }
+          }
+       }
+       .item{border-bottom:1px solid #ebebeb;
+        padding:15rpx;
+      }
+      .call-phone-item{
+         display: flex;
+         justify-content: space-between;
+      }
+      
+       .about-me{
+          border-bottom:15rpx solid #ebebeb;
+       }
+    }
+ }

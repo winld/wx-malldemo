@@ -1,0 +1,32 @@
+// 综合
+.first-tab{
+   .goods-item{
+       display: flex;
+       border-bottom: 2rpx solid rgb(204, 203, 203);
+       padding: 5rpx 10rpx;
+       .goods-img-wrap{
+           flex: 2;
+           image{
+               width: 70%;
+           }
+       }
+       .goods-content{
+           flex: 5;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-between;
+           .goods-name{
+               display: flex;
+               //第二排 超出部分用 ... 代替
+               display: -webkit-box;
+               overflow: hidden;
+               -webkit-box-orient: vertical;
+               -webkit-line-clamp: 2;
+           }
+           .goods-price{
+               color: #E42F14;
+               font-weight: bold;
+           }
+       }
+   }
+}

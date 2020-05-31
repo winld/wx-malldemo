@@ -1,0 +1,19 @@
+<Tab tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+	<view class="order-main">
+		<view class="order-item">
+			<view class="order-no-row">
+				<view class="order-no-text">订单编号</view>
+				<view class="order-no-value">543tsdfs</view>
+			</view>
+			<view class="order-price-row">
+				<view class="order-price-text">订单价格</view>
+				<view class="order-price-value">¥3545353</view>
+			</view>
+			<view class="order-time-row">
+				<view class="order-time-text">订单日期</view>
+				<view class="order-time-value">2018-09-09</view>
+			</view>
+		</view>
+	</view>
+</Tab>
+

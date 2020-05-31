@@ -1,0 +1,22 @@
+.order-main .order-item {
+  border-bottom: 1px solid #ccc;
+  padding-top: 10rpx;
+}
+.order-main .order-item .order-no-row {
+  display: flex;
+  padding: 10rpx 20rpx;
+  justify-content: space-between;
+}
+.order-main .order-item .order-price-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 20rpx;
+}
+.order-main .order-item .order-price-row .order-price-value {
+  color: var(--themeColor);
+}
+.order-main .order-item .order-time-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 20rpx;
+}

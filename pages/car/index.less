@@ -1,0 +1,148 @@
+page{
+   padding-bottom: 90rpx;
+}
+.revice-address-row{
+   .address-btn{
+      padding:10rpx;
+      button{
+         width: 60%;
+      }
+   }
+   .address-info{
+      display: flex;
+      padding: 20rpx;
+      border-bottom:1px solid #838181;
+      .user-info{
+         flex:5
+      }
+      .user-phone{    
+         flex:3;
+         text-align: right;
+
+      }
+   }
+}
+
+.car-content {
+   .car-title {
+ font-size:36rpx;
+ padding:10rpx;
+ color:var(--themeColor);
+border-bottom:1px solid currentColor;
+   }
+ 
+   .cart-main {
+     .car-item {
+        display: flex;
+        border-bottom:1px solid #a8a7a7;
+        .car-chk-wrap {
+           padding-left:15rpx;
+           flex:1;
+           display: flex;
+           //垂直方向居中
+           align-items: center; 
+         checkbox-group {
+           checkbox {
+ color:var(--themeColor);
+           }
+         }
+       }
+ 
+       navigator.car-img {
+          flex: 3;
+          display: flex;
+          justify-content: center;
+          align-items: center; 
+         image {
+           width: 80%;
+         }
+       }
+ 
+       .car-info-wrap {
+          flex: 6;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: space-around; 
+         .goods-name {
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            color: #252424;
+         }
+ 
+         .goods-price-wrap {
+            display: flex;
+            justify-content: space-between;
+            padding-right:15rpx;
+           .goods-price {
+               color:var(--themeColor);
+               font-size:34rpx;
+           }
+ 
+           .cart-num-tool {
+              display: flex;
+             .num-edit {
+                  width: 55rpx;
+                  height: 55rpx;
+                  display: flex;
+                  justify-content: center;
+                  align-content: center;
+                  border:1px solid #a8a7a7;
+             }
+ 
+             .goods-num {
+                  padding:0 20rpx;
+                  height: 55rpx;
+                  line-height: 55rpx;
+             }
+           }
+         }
+       }
+     }
+   }
+ }
+
+/**底部工具拦样式*/
+.footer-tool {
+  position: fixed;
+  bottom:0;
+  left:0;
+  width: 100%;
+  height: 90rpx;
+  border-top:1px solid rgb(238, 236, 236);
+  display: flex;
+  font-size:30rpx;
+   .all-chk-wrap {
+      flex:2;
+      line-height: 90rpx;
+   }
+ 
+   .total-price-wrap {
+      flex: 4;
+      text-align: right;
+      padding-right:10rpx;
+     .total-price {
+        font-weight: bold;
+       .total-price-text {
+          font-size:36rpx;
+          color: var(--themeColor);
+          font-weight: bold;
+       }
+      }
+          .price-mark{
+             font-size:28rpx;
+          }
+ 
+   }
+   .order-pay-wrap {
+      flex:2;
+      line-height: 90rpx;
+      background-color: var(--themeColor);
+      color:white;
+      text-align: center;
+      font-size:34rpx;
+      font-weight: bold;
+    }  
+ }

@@ -1,0 +1,36 @@
+page {
+  background-color: #ebebeb;
+}
+.search-content {
+  padding: 10rpx;
+}
+.search-content .search-input-wrap {
+  display: flex;
+}
+.search-content .search-input-wrap .search-input {
+  flex: 1;
+  background-color: white;
+  height: 60rpx;
+  padding: 0 10rpx;
+}
+.search-content .search-input-wrap button {
+  height: 60rpx;
+  width: 120rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background-color: var(--themeColor);
+  color: white;
+  font-weight: 100;
+  padding: 0rpx;
+  margin-left: 10rpx;
+}
+.search-content .content-wrap {
+  margin-top: 10rpx;
+}
+.search-content .content-wrap navigator {
+  padding: 20rpx 10rpx;
+  border-bottom: 1px solid #ebebeb;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: white;
+}

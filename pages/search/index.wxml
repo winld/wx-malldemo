@@ -1,0 +1,14 @@
+<view class="search-content">
+	<view class="search-input-wrap">
+		<input type="text" class="search-input" bindinput="handelInput" value="{{inputValue}}"/>
+		<button bindtap="handelCancel" hidden="{{!isFouse}}">取消</button>
+	</view>
+	<view class="content-wrap">
+		<navigator wx:for="{{searchs}}" url="/pages/goods_detail/main?goods_id={{item.goods_id}}"
+       open-type="navigate" wx:key="goods_id">
+			{{item.goods_name}}
+		</navigator>
+		
+	</view>
+</view>
+
